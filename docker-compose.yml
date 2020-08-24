@@ -1,16 +1,14 @@
 version: "3.7"
 services:
   webapp:
-    image: jdnbaladjay/ootomast
-
-  ports:
+    build:
+      context: .
+      dockerfile: ./Dockerfile.development
+    ports:
       - "8000:80"
-    volumes:
-      - /var/www
     environment:
       - APP_KEY=SomeRandomStringToAddSecurity123
       - APP_ENV=development
       - APP_DEBUG=true
       - APACHE_RUN_USER=apache-www-volume
       - APACHE_RUN_GROUP=apache-www-volume
-      
