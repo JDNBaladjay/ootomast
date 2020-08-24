@@ -1,0 +1,12 @@
+FROM php:7-apache
+MAINTAINER TEDhouse
+
+# Setup Apache2 config
+COPY 000-default.conf /etc/apache2/sites-available/000-default.conf
+RUN a2enmod rewrite
+
+# use your users $UID and $GID below
+RUN groupadd apache-www-volume -g 1002
+RUN useradd apache-www-volume -u 1001 -g 1002
+
+CMD ["apache2-foreground"]
