@@ -1,10 +1,19 @@
 <?php
 
-//DATABASE CONNECTION VARIABLES
-$host = "captain.hitch.tedhouse.org"; // Host name
-$username = "ootomast"; // Mysql username
-$password = "VEaGvc8E7Y0uFkWauLq1"; // Mysql password
-$db_name = "ootomast"; // Database name
 
+require_once realpath(__DIR__ . "/vendor/autoload.php");
+
+use Dotenv\Dotenv;
+
+$dotenv = Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
+//DATABASE CONNECTION VARIABLES
+$host = getenv("DB_HOST"); // Host name
+$username = getenv("DB_USERNAME"); // Mysql username
+$password = getenv("DB_PASSWORD"); // Mysql password
+$db_name = getenv("DB_NAME"); // Database name
+
+echo $host;
 // Create connection
 $conn = mysqli_connect($host, $username, $password, $db_name);
