@@ -1017,7 +1017,7 @@ left: 50%;
 
 				// Redirect
 				setTimeout(function () {
-					window.location.replace("http://ootomast.000webhostapp.com/index.php");
+					window.location.replace("index.php");
 				}, 100);
 			}
 		}

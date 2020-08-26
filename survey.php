@@ -493,7 +493,7 @@
       
 
         function exit(){
-        	window.location.replace("http://ootomast.000webhostapp.com/index.php");
+        	window.location.replace("index.php");
         }
 
         function newRespondent(){
@@ -1229,7 +1229,7 @@
           	if(facilitated == false){
           	    autoRedirect = true;
                 setTimeout(function () {
-    							   window.location.href = "http://ootomast.000webhostapp.com/dosurvey"; 
+    							   window.location.href = "dosurvey"; 
     							}, 1000); //will call the function after 1 secs.
             }
           	
@@ -1243,7 +1243,7 @@
                   if(facilitated == false){
               	    autoRedirect = true;
                     setTimeout(function () {
-        							   window.location.href = "http://ootomast.000webhostapp.com/dosurvey"; 
+        							   window.location.href = "dosurvey"; 
         							}, 1000); //will call the function after 1 secs.
                 }
             })

@@ -76,7 +76,7 @@
         results = Papa.parse(xhr.responseText)
         localStorage.setItem(code+'', JSON.stringify(results));
         console.log(results);
-        var url = 'http://ootomast.000webhostapp.com/survey.php';
+        var url = 'survey.php';
         var form = $('<form action="' + url + '" method="post" style="display:none;">' +
           '<input type="text" name="surveyId" value="' + code + '" />' +
           '<input type="text" name="notFacilitated" value="1" />' +
