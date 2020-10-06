@@ -53,7 +53,7 @@ function getCsvDropbox(path, code) {
       localStorage.setItem(code + "", JSON.stringify(results));
       console.log(results);
       setTimeout(function () {
-        window.location.replace(window.location.protocol + '//' + window.location.hostname + (window.location.port ? ':' + window.location.port : '') + "index.php");
+        window.location.replace(window.location.protocol + '//' + window.location.hostname + (window.location.port ? ':' + window.location.port : '') + "/index.php");
       }, 100);
     }
   };
@@ -165,7 +165,7 @@ function uploadSurveyMeta(surveyCode, surveyID, surveyName) {
   xhr.onreadystatechange = function() {//Call a function when the state changes.
     if(xhr.readyState == 4 && xhr.status == 200) {
       setTimeout(function () {
-        window.location.replace(window.location.protocol + '//' + window.location.hostname + (window.location.port ? ':' + window.location.port : '') + "index.php");
+        window.location.replace(window.location.protocol + '//' + window.location.hostname + (window.location.port ? ':' + window.location.port : '') + "/index.php");
       }, 100);
     }
   }
@@ -196,7 +196,7 @@ function deleteSurvey(surveyID) {
     }
 
     setTimeout(function () {
-      window.location.replace(window.location.protocol + '//' + window.location.hostname + (window.location.port ? ':' + window.location.port : '') + "index.php");
+      window.location.replace(window.location.protocol + '//' + window.location.hostname + (window.location.port ? ':' + window.location.port : '') + "/index.php");
     }, 100);
   }
 }
