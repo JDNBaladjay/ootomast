@@ -3,7 +3,8 @@ LABEL maintainer=TE3DHouse
 LABEL email=admin@tedhouse.org
 
 RUN apt-get update
-RUN apt-get install -y git php-mysqli
+RUN apt-get install -y git
+RUN docker-php-ext-install mysqli
 COPY 000-default.conf /etc/apache2/sites-available/000-default.conf
 COPY start-apache /usr/local/bin
 RUN cd /usr/local/bin && chmod 755 start-apache
