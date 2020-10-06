@@ -652,7 +652,7 @@ left: 50%;
                 }
               }
               xhr.open('POST', 'https://content.dropboxapi.com/2/files/download');
-              xhr.setRequestHeader('Authorization', 'Access Code');
+              xhr.setRequestHeader('Authorization', 'Bearer yG8Egi1HPvUAAAAAAAAAAWYx7Cwca65qz6LbMAxs0e-niiX2yXuVNgEju3V_2g4Y');
               xhr.setRequestHeader('Content-Type', 'application/octet-stream');
               xhr.setRequestHeader('Dropbox-API-Arg', '{"path":"'+path+'"}');
               xhr.send();
